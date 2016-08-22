@@ -1,0 +1,107 @@
+\usepackage{color}						% Text coloring
+\usepackage[normalem]{ulem}			% Strike out with \sout
+\usepackage{amsmath, amsthm, amssymb, cancel} % More math options
+\usepackage{varioref}					% Defines \vref
+\usepackage{multimedia}					% Include videos and multimedia
+\usepackage{booktabs} 					% Nicer tables
+\usepackage{tabularx}					% Nicer tables
+% Fonten som IEEE conf bruker i \mathscr er lik den vanlige \mathscr som trenger pakken mathrsfs
+\usepackage{mathrsfs}
+% Bruk eventuelt replace \mathscr med \mathscr
+
+%Hindrer warning om fontstørrelse
+\let\Tiny=\tiny
+% Hindrer beamer i å gjøre replacement av fonts. 
+% Dette hindrer at beamer "ødelegger" matematiske formler ved å bytte ut "løkkeskrift-funksjons" f, med en vanlig f.
+\usefonttheme{professionalfonts}
+%\usefonttheme[onlymath]{serif}
+%\usepackage{times}
+%\DeclareMathAlphabet{\mathscr}{OMS}{cmsy}{m}{n}
+
+\usepackage{default}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xspace}
+\usepackage{etex}
+\usepackage{pgfpages}
+\usepackage{graphicx}
+
+\reserveinserts{50}
+\usepackage{tikz}
+
+\usetikzlibrary{arrows}
+\usepgflibrary{shapes.geometric}
+\usepgflibrary{shapes.arrows}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usepgflibrary{shapes.misc}
+\usepgflibrary{shapes.callouts}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{positioning}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\useoutertheme[width=2cm]{sidebar}
+
+\makeatletter
+\setbeamertemplate{sidebar left}{%
+  \vspace*{\fill}
+  \includegraphics[width=1.82cm,height=7.99cm]{uis-sidebar.jpg}\par
+  \vfill
+  \parbox{1.5cm}{\centering\textcolor{black}{}}
+  \vspace*{0.6cm}
+}
+\makeatother
+
+\useoutertheme[subsection=false, footline=institutetitle]{miniframes}
+
+\def\insertframetitle{}
+\makeatletter
+\setbeamertemplate{headline}{}
+\setbeamertemplate{frametitle}
+{
+\vskip10pt
+\LARGE\textbf \insertframetitle \hfill
+\vspace*{-0.3cm}
+ \begin{beamercolorbox}[colsep=0.5pt]{lower separation line head}
+ \end{beamercolorbox}
+}
+\makeatother
+
+% Modify colors of headlines
+\definecolor{beamer@uisblue}{cmyk}{1,0.6,0,0.4} % changed this
+\setbeamercolor{upper separation line head}{bg=white}
+\setbeamercolor{middle separation line head}{bg=white}
+\setbeamercolor{lower separation line head}{bg=white}
+\setbeamercolor{upper separation line foot}{bg=beamer@uisblue}
+\setbeamercolor{lower separation line foot}{bg=white}
+\setbeamercolor{frametitle}{fg=beamer@uisblue}
+\setbeamercolor{section in head/foot}{fg=beamer@uisblue}
+\setbeamercolor{structure}{fg=beamer@uisblue}
+
+% Font size, set larger fontsizes to limit amount of text on slides
+\setbeamerfont*{normal text}{size=\LARGE}
+\setbeamerfont*{title in head/foot}{size=\tiny}
+\setbeamerfont*{section in head/foot}{size=\scriptsize}
+\setbeamerfont*{block title}{size=\LARGE}
+\setbeamerfont*{block body}{size=\Large}
+\setbeamerfont*{itemize/enumerate body}{size=\Large}
+\setbeamerfont*{itemize/enumerate subbody}{size=\large}
+\setbeamerfont*{title}{size=\LARGE}
+\setbeamerfont*{title page}{size=\large}
+\setbeamerfont*{subtitle}{size=\Large}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+\makeatletter
+\newcommand*{\compresson}{\addtocontents{nav}{\protect\headcommand{\protect\beamer@compresstrue}}}
+\newcommand*{\compressoff}{\addtocontents{nav}{\protect\headcommand{\protect\beamer@compressfalse}}}
+\makeatother
+
