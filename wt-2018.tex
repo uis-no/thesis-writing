@@ -1,0 +1,327 @@
+\documentclass[hyperref={pdfpagelabels=false}, aspectratio=1610]{beamer}
+\input{uis-preamble}
+
+\title[Thesis Writing]{Introduction to Writing a Thesis}
+\subtitle{Tips, Tools, and Recommendations}
+\author[Hein Meling]{{\bf Hein Meling}}
+\institute[Univ. of Stavanger]
+	{\includegraphics[scale=0.4]{./uis-logo-en.pdf}
+	\\{\emph{hein.meling@uis.no}}}
+\date[Aug 2016]{August 2016}
+
+\begin{document}
+
+\compresson
+
+% Use \hoffset to center text on a title page without sidebar
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+\endgroup
+
+% \begin{frame}
+%  \frametitle{Outline -REVISE}
+%  \begin{itemize}
+%   \item Motivation
+%   \item Editors and Tools
+%   \item A Few Tricks
+%   \item Some Simple Examples
+%  \end{itemize}
+% \end{frame}
+
+
+\begin{frame}
+\frametitle{Planning Your Project Work}
+\begin{block}{}
+ \begin{itemize}
+  \item Deadline: December 23 
+  \item Absolutely no extensions!
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Planning Your Thesis Work}
+\begin{block}{}
+ \begin{itemize}
+  \item Deadlines:
+  \begin{itemize}
+  	\item Bachelor: May 15
+	\item Master: June 15
+	\item Only the dean can grant extensions (but he never does!)
+	\item Extending due to sick leave: need sykemelding from doctor;
+	\begin{itemize}
+		\item usually only if more than a week of illness
+	\end{itemize}
+  \end{itemize}
+  \item Not a whole lot of time!
+  \item Need careful planning
+  \item Important to stay focused
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Gantt Chart}
+ \begin{center}
+  \includegraphics[scale=0.25]{fig/gantt-example}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Project Description}
+\begin{block}{}
+ \begin{itemize}
+  \item Project descriptions are in some cases a bit vague
+  \item Project proposer does not always know what he/she wants
+  \item Write your own version
+  \item Headings:
+  \begin{itemize}
+  	\item Background
+	\item Motivation
+	\item Objectives
+	\item Gantt Chart with Tasks and Milestones
+  \end{itemize}
+  \item Submit project description by \textbf{Monday August 29}
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Project Description}
+\begin{block}{}
+\begin{columns}
+
+\begin{column}{.5\textwidth}
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.2]{fig/p1}
+\end{figure}
+\end{column}
+
+\begin{column}{.5\textwidth}
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.25]{fig/p2}
+\end{figure}
+\end{column}
+
+\end{columns}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Work Process}
+\begin{block}{}
+ \begin{itemize}
+  \item Weekly supervision: 20-30 minutes
+  \begin{itemize}
+  	\item Must be efficient; come well-prepared
+  	\item You are expected to drive the meetings
+  	\item What's been done; what are the challenges
+  	\item Action Points for next meeting
+  \end{itemize}
+  \item<2-> After each meeting
+  \begin{itemize}
+  	\item<2-> Minutes from meeting;  two sections
+	\begin{itemize}
+		\item<2-> Short summary of work done (max 5 lines)
+		\item<2-> Action Points for coming week
+	\end{itemize}
+	\item<2-> Upload to shared Dropbox folder
+  \end{itemize}
+ \item<3-> Need more assistance
+ \begin{itemize}
+ 	\item<3-> Schedule separate meeting with your advisor
+ \end{itemize}
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Work Process (2)}
+\begin{block}{}
+ \begin{itemize}
+  \item Towards the final report
+  \begin{itemize}
+  	\item Two deliverables and final report
+  	\item (Read and comment on each others reports)
+  	\item Learn a lot from reading what others write
+  \end{itemize}
+  \item<2-> Deliverables:
+  \begin{itemize}
+  	\item<2-> October 3
+  	\item<2-> November 7
+  	\item<2-> December 23 (final report)
+  \end{itemize}
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Work Process (3)}
+\begin{block}{}
+ \begin{itemize}
+  \item Your advisor will read and comment on your report too:
+  \begin{itemize}
+  	\item Final report
+  	\item Some of the deliverables
+  \end{itemize}
+  \item In some cases: review code
+  \item Will help as much as I can by email or Slack
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{When to Start Writing?}
+ \begin{itemize}
+  \item<2-> Today!
+  \item<3-> You can set up the document 
+  \item<4-> Prepare a disposition (fill in the headings)
+  \item<5-> You can always change things later
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{How to structure the thesis report}
+ % Talk to each bullet here:
+ \begin{itemize}
+  \item Abstract (300-500 words)
+  \item Introduction (3-5 pages)
+  % Explain that intro is important; it is what makes the reader decide if it is worth their time
+  \item Background, Technology Review, Related Work (10-20 p.)
+  % Explain difference between background and related work
+  \item Design, Model, Architecture (10-30 p.)
+  \item Implementation (10-20 p.)
+  \begin{itemize}
+   \item Technical details of interest, optimizations, algorithms, ...
+   \item Don't explain every bit of code; only the interesting parts
+  \end{itemize}
+  \item Evaluation, Discussion, Insights (10-30 p.)
+  \item Conclusion (300-500 words)
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{How to structure the project report}
+ \begin{itemize}
+	\item Same as for thesis report
+	\begin{itemize}
+		\item Except scaled down to 10-16 pages.
+	\end{itemize}
+	\item Double column format.
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Tips for the report content}
+ \begin{itemize}
+  \item Name chapters appropriately; other names than those on previous slide is ok.
+  \item Start Chapter/Section with a brief summary of what the reader can expect to learn from reading it.
+  \begin{itemize}
+   \item Thus far, we have presented Replacement for a single Paxos instance. In this section, we explain how to apply Replacement to an RSM that executes a sequence of Paxos instances.
+  \end{itemize}
+  \item Insert paragraph breaks (avoid too long paragraphs)
+  % \item 
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{How to Work?}
+ \begin{itemize}
+  \item<2-> Switch between coding and writing!
+  \item<3-> Expect to rewrite everything you write; 
+  \begin{itemize}
+  	\item<3-> So don't spend time making it perfect 
+  \end{itemize}
+  \item<4-> Iterate to improve report to make it perfect
+  \item<5-> Why work this way?
+  \begin{itemize}
+	\item<6-> Two modes of thinking
+  	\item<6-> Makes you think differently about the problem 
+  \end{itemize}
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Specification: Thinking Before Coding}
+ \begin{itemize}
+  \item Write specifications:
+  \begin{itemize}
+  	\item high-level specification of system
+	\item low-level specification for each function
+  \end{itemize}
+  \item Textual specifications are fine!
+  \item Also: Express ideas in diagrams and figures
+  \item Simplicity
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Modeling Languages}
+ \begin{itemize}
+  \item Unified Modeling Language (UML)
+  \begin{itemize}
+	\item Use Case Diagrams
+  	\item \textbf{Class Diagrams} (Entity Relation)
+	\item \textbf{Sequence Charts}
+	\item \textbf{State Machine Diagrams}
+  \end{itemize}
+  \item \textbf{Flow Charts}
+  \item Work Flow Diagrams
+  \item Data Flow Diagrams
+  \item Wireframe / UI Mockups
+  \item Infographics
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Tools}
+ \begin{itemize}
+  \item git and github
+  \item Dropbox
+  \item LaTeX/bibtex for the report
+  \item Slack for chat rooms (Gophers/general)
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Conclusions}
+ \begin{itemize}
+  \item I have high expectations
+  \item Want you to succeed!
+ \end{itemize}
+\end{block}
+\end{frame}
+
+
+\end{document}
