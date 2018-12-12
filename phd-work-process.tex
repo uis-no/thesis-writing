@@ -347,33 +347,6 @@
 \end{frame}
 
 \begin{frame}
-\begin{block}{Best Practices: GitHub and LaTeX (Naming)}
- \begin{itemize}
-\item Pick a good repo name (think); be consistent when naming things; lower-case
-\item thesis/\pname{project-name}
-\item Example: thesis/blockchain-storage
-  \begin{itemize}
-  	\item In \pname{project-name} root folder:
-	\begin{itemize}
-		\item main.tex
-		\item main.bib
-		\item \pname{template files for conference/journal}
-		\item .gitignore \quad (Use GitHub's TeX template)
-	\end{itemize}
-	\item In subfolders:
-	\begin{itemize}
-		\item tex/ \quad fig/ \quad alg/ \quad plots/
-	\end{itemize}
-	\item Do not commit generated files, including main.pdf
-	\begin{itemize}
-		\item Include such files in .gitignore
-	\end{itemize}
-  \end{itemize}
-  \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
 \begin{block}{Quick Guide to git Command Line}
  \begin{itemize}
   \item git clone \pname{repo-link from github}
@@ -397,6 +370,36 @@
 \end{block}
 \end{frame}
 
+
+\begin{frame}
+\begin{block}{Best Practices: GitHub and LaTeX}
+ \begin{itemize}
+  \item Naming folders (under bbchain repo):
+  \begin{itemize}
+  	\item consistent naming; lower-case; think of a good name!
+	\item papers/\pname{project-name}/\pname{conference-name}
+	\item Example: papers/blockchain-storage/icdcs2020
+  \end{itemize}
+  \begin{itemize}
+  	\item In root folder:
+	\begin{itemize}
+		\item main.tex
+		\item main.bib
+		\item \pname{template files for conference/journal}
+		\item .gitignore \quad (Use GitHub's TeX template)
+	\end{itemize}
+	\item In subfolders:
+	\begin{itemize}
+		\item tex/ \quad fig/ \quad alg/ \quad plots/
+	\end{itemize}
+	\item Do not commit generated files, including main.pdf
+	\begin{itemize}
+		\item Include such files in .gitignore
+	\end{itemize}
+  \end{itemize}
+  \end{itemize}
+\end{block}
+\end{frame}
 
 \begin{frame}
 \begin{block}{Publishing}
