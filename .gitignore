@@ -21,7 +21,7 @@ outline.txt
 main.pdf
 test.pdf
 test.tex
-wt-2018.pdf
+wt-*.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
